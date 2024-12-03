@@ -1,0 +1,6 @@
+streamlit==1.27.0
+folium==0.14.0
+geopandas==0.14.0
+tqdm==4.66.1
+branca==0.6.0
+streamlit-folium==0.11.0
