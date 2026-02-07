@@ -1,6 +1,10 @@
 streamlit
 folium
+streamlit-folium
 geopandas
+shapely
+pyproj
+fiona
 tqdm
 branca
-streamlit-folium
+scipy
