@@ -1,5 +1,6 @@
 streamlit
 folium
+numpy
 streamlit-folium
 geopandas
 shapely
