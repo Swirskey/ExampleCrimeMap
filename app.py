@@ -107,7 +107,7 @@ def render_map_html(month: int, hour: int) -> str:
             "type": "Feature",
             "geometry": geometry,
             "properties": {
-                "danger_score": f"{score:.2f}",
+                "risk_score": f"{score:.2f}",
                 "color": colormap(score),
             },
         }
@@ -124,7 +124,7 @@ def render_map_html(month: int, hour: int) -> str:
             "weight": 0.5,
             "fillOpacity": 0.6,
         },
-        popup=folium.GeoJsonPopup(fields=["danger_score"], aliases=["Danger Score:"]),
+        popup=folium.GeoJsonPopup(fields=["risk_score"], aliases=["Risk Score:"]),
     ).add_to(m)
 
     return m.get_root().render()
@@ -133,7 +133,7 @@ def render_map_html(month: int, hour: int) -> str:
 # -----------------------------
 # Streamlit app layout
 # -----------------------------
-st.title("Danger Score Map")
+st.title("Area Risk Map")
 
 st.sidebar.header("Input Parameters")
 

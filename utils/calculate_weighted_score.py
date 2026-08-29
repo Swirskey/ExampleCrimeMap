@@ -23,15 +23,15 @@ def weighted_score(hour, month, distances, closest_landmarks):
 
     # Step 4: Calculate the weighted score based on these normalized weights
     for i, landmark in enumerate(closest_landmarks):
-        # Extract weights and danger score from the landmark's properties
+        # Extract weights and risk score from the landmark's properties
 
         time_weight = landmark["weights"]["hourly_weights"][hour]
         month_weight = landmark["weights"]["monthly_weights"][month - 1]  # Month is 1-indexed
-        danger_score = landmark["score"]
+        risk_score = landmark["score"]
         normalized_weight = normalized_weights[i]
 
         # Calculate the weighted severity score for this landmark
-        weighted_severity = danger_score * time_weight * month_weight
+        weighted_severity = risk_score * time_weight * month_weight
         # Weight it by the normalized inverse distance weight
         total_weighted_score += weighted_severity * normalized_weight
 
